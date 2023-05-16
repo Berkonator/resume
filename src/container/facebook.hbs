@@ -1,0 +1,37 @@
+<main>
+  <h1>{{name}}</h1>
+  <hr />
+  {{#each users}}
+  {{> facecard}}
+  <br>
+  <h4>Friends:</h4>
+  <ul>
+  {{#each friends}}
+  <li>
+    {{> facecard}}
+    <h5>Friends:</h5>
+    <ul>
+        {{#each mutual_friends}}
+        <li>
+            {{> facecard}}
+        </li>
+        {{/each}}
+    </ul>
+  </li>
+  {{/each}}
+  </ul>
+  <br>
+  <h4>Groups: </h4>
+  {{#each groups}}
+  {{> facegroup}}
+  <h5>Members:</h5>
+    <ol>
+    {{#each members}}
+        <li>
+            {{> facecard}}
+        </li>
+    {{/each}}
+    </ol>
+  {{/each}}
+  {{/each}}
+</main>
