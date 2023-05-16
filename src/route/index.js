@@ -637,6 +637,8 @@ router.get('/mac', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
+    layout: 'basic',
+
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
     price: 1999.99,
@@ -676,10 +678,10 @@ router.get('/mac', function (req, res) {
           type: 'Thunderbolt 3',
           count: 4,
           features: [
-            'Charging',
-            'DisplayPort',
-            'Thunderbolt (up to 40 Gbps)',
-            'USB 3.1 Gen 2 (up to 10 Gbps)',
+            ' Charging',
+            ' DisplayPort',
+            ' Thunderbolt (up to 40 Gbps)',
+            ' USB 3.1 Gen 2 (up to 10 Gbps)',
           ],
         },
         {
