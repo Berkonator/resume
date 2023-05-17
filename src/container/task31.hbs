@@ -1,0 +1,12 @@
+<main>
+    {{#with city}}
+    <h2>{{title}}</h2>   
+    <div class="row col-10">
+        {{#each cards}}        
+        <div class="col-6">               
+        {{> taskcard}}              
+        </div>
+        {{/each}}       
+    </div>   
+    {{/with}}
+</main>
