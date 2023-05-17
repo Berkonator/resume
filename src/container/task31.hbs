@@ -1,0 +1,54 @@
+<main>
+    {{#with city}}
+    <h2>{{title}}</h2>   
+    <div class="row g-3">
+        {{#each cards}}        
+        <div class="col-5">               
+        {{> taskcard}}              
+        </div>
+        {{/each}}       
+    </div>   
+    {{/with}}
+    <br><hr><br>
+    {{#with winner}}
+    <h2>{{title}}</h2>
+        {{#with table}}
+        <table class="table">
+            <tr>
+                {{#each head}}<th>{{this}}</th>{{/each}}
+            </tr>
+            {{#each user}}
+            <tr>
+                <th>{{place}}</th>
+                <td>{{name}}</td>
+                <td>{{surname}}</td>
+                <td>{{nickname}}</td>            
+            </tr>
+            {{/each}}
+        </table>
+        {{/with}}
+    {{/with}}
+    <br><hr><br>
+    {{#with gallery}}
+    <h2>{{title}}</h2><br>
+    <div class="row">
+        {{#each cards}}
+        <div class="col-4">
+            <div class="card">               
+                <div class="card-header">
+                    {{name}}
+                </div>
+                <div class="list-group list-group-flush">
+                    {{#each items}}
+                    <div class="list-group-item">
+                        {{this}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+    <br><hr><br>
+</main>
