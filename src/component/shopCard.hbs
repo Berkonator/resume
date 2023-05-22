@@ -1,0 +1,35 @@
+{{#each cards}}
+        <div class="col-3">
+            <div class="card text-bg-dark m-2">                
+                {{#if isTop}}
+                    {{#if isNew}}
+                    <div class="card-title p-3 pb-0">{{title}} <span class="badge text-bg-success">new</span> <span class="badge text-bg-danger">top</span> </div>
+                    <hr>
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{else}}
+                    <div class="card-title p-3 pb-0">{{title}}<span class="badge text-bg-danger">top</span></div>
+                    <hr>
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{/if}}
+                {{else}}
+                    {{#if isNew}}
+                    <div class="card-title p-3 pb-0">{{title}}<span class="badge text-bg-success">new</span></div>
+                    <hr>
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{else}}
+                    <div class="card-title p-3 pb-0">{{title}}</div>
+                    <hr>
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{/if}}
+                {{/if}}
+            </div>
+        </div>
+{{/each}}

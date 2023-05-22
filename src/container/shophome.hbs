@@ -1,0 +1,39 @@
+<main>
+    <style>
+        html{
+            max-width: 100%;
+        }
+    </style>
+<!-- 1 -->
+    {{#with newsBlock}}
+    <h1 class="mb-4 text-center">{{title}}</h1>
+    <div class="row">
+        {{> shopCard}}
+    </div>
+    {{/with}}
+<!-- 2 -->
+    {{#with goodsBlock}}   
+        <div class="nav nav-tabs row col-12 my-5">
+            {{#each tabs}}
+            <div class="nav-item col-3">                
+                {{#if isDisabled}}
+                    {{#if isActive}}
+                       <a href="#" class="nav-link active disabled">{{text}}</a>
+                       {{else}}
+                       <a href="#" class="nav-link disabled">{{text}}</a>
+                    {{/if}}
+                    {{else}}
+                    {{#if isActive}}
+                       <a href="#" class="nav-link active ">{{text}}</a>
+                       {{else}}
+                       <a href="#" class="nav-link">{{text}}</a>
+                    {{/if}}
+                {{/if}}               
+            </div>
+            {{/each}}
+        </div>
+        <div class="row">
+            {{> shopCard2}}
+        </div>       
+    {{/with}}
+</main>

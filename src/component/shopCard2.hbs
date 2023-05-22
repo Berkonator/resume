@@ -1,0 +1,38 @@
+{{#each cards}}
+        <div class="col-4 mt-3">
+            <div class="card  m-4">                
+                {{#if isHot}}
+                    {{#if isNew}}
+                    <img class="card-img-top" src="{{image}}">
+                    <div class="card-title p-3 pb-0">{{title}} <span class="badge text-bg-primary">new</span> <span class="badge text-bg-warning">hot!</span> </div>
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{else}}
+                    <img class="card-img-top" src="{{image}}">
+                    <div class="card-title p-3 pb-0">{{title}} <span class="badge text-bg-warning">hot!</span></div>
+                    
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{/if}}
+                {{else}}
+                    {{#if isNew}}
+                    <img class="card-img-top" src="{{image}}">
+                    <div class="card-title p-3 pb-0">{{title}} <span class="badge text-bg-primary">new</span></div>
+                    
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{else}}
+                    <img class="card-img-top" src="{{image}}">
+                    <div class="card-title p-3 pb-0">{{title}}</div>
+                    
+                    <div class="card-body">
+                        {{description}}
+                    </div>
+                    {{/if}}
+                {{/if}}
+            </div>
+        </div>
+{{/each}}

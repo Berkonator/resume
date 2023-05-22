@@ -1,0 +1,15 @@
+<div class="card">
+{{#with navigation}}
+<div class="nav">
+    {{#each links}}
+    <div class="nav-item">
+        {{#if dis}}
+        <a class="nav-link disabled" href="{{href}}">{{text}}</a>
+        {{else}}
+        <a class="nav-link" href="{{href}}">{{text}}</a>
+        {{/if}}
+    </div>
+    {{/each}}
+</div>
+{{/with}}
+</div>
