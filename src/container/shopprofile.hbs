@@ -1,0 +1,61 @@
+<main>
+    <h1  class="mt-5">{{header}}</h1>
+    {{#with purchase}}
+        <div class="nav nav-tabs row col-12 mt-5 mb-4">
+            {{#each tabs}}
+            <div class="nav-item col-3">
+                <a class="nav-link" href="#">{{this}} </a>
+            </div>
+            {{/each}}
+        </div>
+
+        {{#with actionBlock}}
+        <div class="row g-3">
+            <div class="col-3">
+                <input type="text" placeholder="Placeholder">
+            </div>
+            {{#each buttons}}
+            <div class="col-2">
+                {{#if isSuccess}}
+                <a class="btn btn-success" href="{{link}}">{{text}}</a>
+                {{else}}
+                    {{#if isOutline}}
+                    <a class="btn btn-outline-success" href="{{link}}">{{text}}</a>
+                    {{else}}
+                        {{#if isDanger}}
+                        <a class="btn btn-danger" href="{{link}}">{{text}}</a>
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+        <hr class=" my-5">
+        <div class="row g-3">
+            {{#each itemList}}
+            <div class="col-4">
+                <div>{{number}}</div>
+                <div>{{status}}</div>
+            </div>
+            <div class="col-2">
+                {{#with amount}}
+                <p>{{title}}</p>
+                <h4>{{value}}</h4>
+                {{/with}}
+            </div>
+            <div class="col-4">
+                {{#each images}}
+                <img src="{{this}}" alt="image">
+                {{/each}}
+            </div>
+            <div class="col-2">
+                {{#with button}}
+                <a class='btn btn-primary' href="{{link}}">{{text}}</a>
+                {{/with}}
+            </div>
+            {{/each}}
+        </div>
+        <hr class=" my-5">
+    {{/with}}
+</main>
