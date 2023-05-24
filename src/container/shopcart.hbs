@@ -1,0 +1,24 @@
+<main>
+    {{#with header}}
+       <div class="mt-5">
+            <h1>{{title}}</h1>
+            {{#with button}}
+            <a class="btn btn-outline-secondary" href="{{link}}">{{text}}</a>
+            {{/with}}
+       </div>
+       <hr class="my-5">
+       
+    {{/with}}
+    <div>{{> shopCartCard}}</div>
+    <hr class="my-5">
+    {{#with total}}
+        <h3>{{title}}</h3>
+        <h2>{{amount}}</h2>
+        <p>{{delivery}}</p>
+        {{#each buttons}}
+        <a {{#if isSuccess}} class="btn btn-success" {{else}} {{#if isOutline}} class="btn btn-outline-success"{{/if}} {{/if}} href="{{link}}">{{text}}</a>
+        {{/each}}
+    {{/with}}
+    <hr class="my-5">
+    
+</main>
