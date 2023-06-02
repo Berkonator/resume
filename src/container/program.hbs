@@ -16,7 +16,52 @@
         <ul>
             {{#each program}}
             <li>
-
+                <h2>{{name}}</h2>
+                <h3>{{type}}</h3>
+                <em>Duration {{duration}} day's</em>
+                {{#with details}}
+                    {{#with museum}}
+                        <h3>{{name}}</h3>
+                        {{#with location}}
+                        <em>{{address}} / {{city}} / <strong>{{country}}</strong></em>
+                        {{/with}}
+                        <ol>
+                        {{#each exhibits}}
+                            <li>
+                                <h4>{{name}}</h4>
+                                <strong>{{artist}}</strong>
+                                <p>{{description}}</p>
+                                {{#if audio_guide}}
+                                <p><em>Tour with <b>audio guide</b></em></p>
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                        </ol>
+                    {{/with}}
+                    {{#with guide}}
+                    <em><b>{{name}}</b> - {{language}} - rating: {{rating}}*</em>
+                    {{/with}}
+                {{/with}}
+                {{#with details}}
+                    {{#with venue}}
+                        <h3>{{name}}</h3>
+                            {{#with location}}
+                            <em>{{address}} / {{city}} / <strong>{{country}}</strong></em>
+                            {{/with}}
+                        <ul>
+                        {{#each perfomers}}
+                            <li>
+                            <h5>{{name}}</h5>
+                            <p>{{type}}</p>
+                            </li>
+                        {{/each}}
+                        </ul>
+                        {{#with guide}}
+                        <em><b>{{name}}</b> - {{language}} - rating: {{rating}}*</em>
+                        {{/with}}
+                    {{/with}}
+                {{/with}}
+                
             </li>
             {{/each}}
         </ul>
