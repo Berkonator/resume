@@ -1,11 +1,11 @@
-<div>
+<div class="mt-4">
     {{#each footer}}
-    <div class="table">
-        <tr>
-            <td>
-                <a href="{{link}}">{{text}}</a>
-            </td>
-        </tr>
+    <div class="row mx-5 text-center">
+        {{#each this}}
+        
+                <a class="col-3 mt-2" href="{{link}}">{{text}}</a>
+            
+        {{/each}}
     </div>
     {{/each}}
 </div>
