@@ -43,7 +43,16 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    
+    page: {
+      title: 'Resume | StartPage'
+    },
+
+    header,
+
+    footer,
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -186,7 +195,7 @@ router.get('/work', function (req, res) {
   res.render('work', {
     // ↙ сюди вводимо JSON дані
 
-    layout: 'big',
+   layout: 'default',
 
     page: {
       title: 'Resume | Work',
